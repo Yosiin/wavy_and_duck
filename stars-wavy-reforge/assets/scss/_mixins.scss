@@ -1,0 +1,30 @@
+/*
+* Mixins
+----------------------------------------*/
+// Wavy animation 
+@mixin wave($name,$speed, $delay, $opacity) {
+    animation-name: $name;
+    animation-duration: $speed;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-delay: $delay;
+    opacity: $opacity;
+}
+  
+@mixin wavy-keyframes($name, $from, $to) {
+    @keyframes #{$name} {
+        0% {
+        background-position-x: $from;
+        }
+        100% {
+        background-position-x: $to;
+        }
+    }
+}
+
+@mixin duck( $width, $height, $top, $left ) {
+    width: $width;
+	height: $height;
+	top: $top;
+	left: $left;
+}

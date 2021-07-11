@@ -1,0 +1,495 @@
+@import url("https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400;0,500;0,600;0,800;0,900;1,400;1,500;1,600;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500;600;800&display=swap");
+/*
+* Variables
+-----------------------------------------*/
+/*
+* Mixins
+----------------------------------------*/
+/*
+*Genereal settings
+-----------------------------------*/
+html {
+  box-sizing: border-box; }
+
+* {
+  padding: 0;
+  margin: 0; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+a {
+  text-decoration: none;
+  color: var(--red); }
+
+ul {
+  list-style: none; }
+
+input,
+textarea,
+button {
+  background: #F4F1F4;
+  border: none; }
+
+::selection {
+  background: #697686;
+  color: #732c51;
+  text-shadow: none; }
+
+body {
+  font-family: 'Inter', sans-serif;
+  /* Text */
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+  background-color: #110A34; }
+
+/*
+* The sky
+---------------------------------------------------------------*/
+.bg-night {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(45deg, #48aabb, #051937);
+  background-size: 400% 400%;
+  animation: sunshine 30s ease infinite; }
+
+@keyframes sunshine {
+  0% {
+    background-position: 91% 0%; }
+  50% {
+    background-position: 10% 100%; }
+  100% {
+    background-position: 91% 0%; } }
+.sun-squares {
+  position: absolute;
+  top: 550px;
+  left: 20%;
+  z-index: 1000;
+  animation: circle 30s linear infinite; }
+
+@keyframes circle {
+  0% {
+    transform: rotate(0deg) translate(-765px, 500px) rotate(0deg); }
+  100% {
+    transform: rotate(360deg) translate(-765px, 500px) rotate(-360deg); } }
+.sun {
+  z-index: 100;
+  width: 80px;
+  height: 80px;
+  background: #e2b63f;
+  box-shadow: 0px 0px 150px 30px #e2b63f;
+  position: absolute; }
+
+.square1 {
+  opacity: 0.7;
+  top: 500px;
+  left: 500px;
+  transform: rotate(0deg);
+  animation-name: rotating2;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes rotating2 {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(180deg); } }
+.square2 {
+  opacity: 0.5;
+  top: 500px;
+  left: 500px;
+  transform: rotate(45deg);
+  animation-name: rotating1;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes rotating1 {
+  0% {
+    transform: rotate(45deg); }
+  100% {
+    transform: rotate(225deg); } }
+.square3 {
+  opacity: 0.2;
+  top: 500px;
+  left: 500px;
+  transform: rotate(90deg);
+  animation-name: rotating3;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes rotating3 {
+  0% {
+    transform: rotate(90deg); }
+  100% {
+    transform: rotate(270deg); } }
+.square4 {
+  opacity: 0.75;
+  top: 500px;
+  left: 500px;
+  transform: rotate(45deg);
+  animation-name: rotating4;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes rotating4 {
+  0% {
+    transform: rotate(45deg); }
+  100% {
+    transform: rotate(225deg); } }
+.square5 {
+  opacity: 0.25;
+  top: 500px;
+  left: 500px;
+  transform: rotate(20deg);
+  animation-name: rotating5;
+  animation-duration: 3.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes rotating5 {
+  0% {
+    transform: rotate(20deg); }
+  100% {
+    transform: rotate(200deg); } }
+.square6 {
+  opacity: 0.45;
+  top: 500px;
+  left: 500px;
+  transform: rotate(60deg);
+  animation-name: rotating6;
+  animation-duration: 2.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes rotating6 {
+  0% {
+    transform: rotate(60deg); }
+  100% {
+    transform: rotate(240deg); } }
+/*
+* Wavy 
+--------------------------------------*/
+.wavy-container {
+  position: absolute;
+  z-index: 1;
+  bottom: -10px;
+  left: 0;
+  width: 100%;
+  height: 150px; }
+
+.wavy-container .wave {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 150px;
+  background: url("../pic/wave.png");
+  background-size: 1150px 150px;
+  opacity: 1; }
+
+.wavy-container .wave1 {
+  animation-name: animate-wave1;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: -6s;
+  opacity: 0.6;
+  bottom: 0px; }
+
+.wavy-container .wave2 {
+  animation-name: animate-wave2;
+  animation-duration: 12s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  opacity: 0.6;
+  bottom: 10px; }
+
+.wavy-container .wave3 {
+  animation-name: animate-wave3;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: -4s;
+  opacity: 0.4;
+  bottom: -5px; }
+
+.wavy-container .wave4 {
+  animation-name: animate-wave4;
+  animation-duration: 7s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: 0s;
+  opacity: 0.6;
+  bottom: 15px; }
+
+.wavy-container .wave5 {
+  animation-name: animate-wave5;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: -6s;
+  opacity: 0.4;
+  bottom: 0px; }
+
+.wavy-container .wave6 {
+  animation-name: animate-wave6;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-delay: -6s;
+  opacity: 0.4;
+  bottom: 0px; }
+
+@keyframes animate-wave1 {
+  0% {
+    background-position-x: 0; }
+  100% {
+    background-position-x: 1150px; } }
+@keyframes animate-wave2 {
+  0% {
+    background-position-x: 0; }
+  100% {
+    background-position-x: 1150px; } }
+@keyframes animate-wave3 {
+  0% {
+    background-position-x: 0; }
+  100% {
+    background-position-x: 1150px; } }
+@keyframes animate-wave4 {
+  0% {
+    background-position-x: 0; }
+  100% {
+    background-position-x: -1150px; } }
+@keyframes animate-wave5 {
+  0% {
+    background-position-x: 0; }
+  100% {
+    background-position-x: -1150px; } }
+@keyframes animate-wave6 {
+  0% {
+    background-position-x: 0; }
+  100% {
+    background-position-x: -1150px; } }
+/*
+* Ducky, ducky
+---------------------------------------------*/
+.duck-movie {
+  position: relative;
+  top: -80px;
+  left: 50%;
+  display: inline-block;
+  animation: duck-movie 30s infinite linear; }
+
+@keyframes duck-movie {
+  0% {
+    left: -100px; }
+  60% {
+    left: 120%; }
+  100% {
+    left: 120%; } }
+.duck {
+  position: relative;
+  animation-name: flying-duck;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite; }
+
+@keyframes flying-duck {
+  0% {
+    transform: rotate(-5deg); }
+  50% {
+    transform: rotate(5deg); }
+  100% {
+    transform: rotate(-5deg); } }
+.head {
+  position: absolute;
+  width: 80px;
+  height: 60px;
+  top: 0;
+  left: 0;
+  background-color: #262626;
+  border-radius: 100px 100px 0 0; }
+
+.eye {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  top: 15px;
+  left: 45px;
+  background: #fff;
+  border-radius: 50%; }
+
+.eyeball {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  top: 4px;
+  left: 5px;
+  background: #ff6347;
+  border-radius: 50%; }
+
+.beak {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: 35px;
+  left: 80px;
+  border-top: 10px solid transparent;
+  border-bottom: 10px solid transparent;
+  border-left: 20px solid #ffdb4d; }
+
+.body {
+  position: relative;
+  width: 160px;
+  height: 80px;
+  top: 60px;
+  left: -80px;
+  background-color: #ff6347;
+  border-radius: 0 0 200px 200px; }
+
+.feather1 {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  top: -37px;
+  left: -30px;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-top: 45px solid #b3b3ff;
+  transform: rotate(-45deg); }
+
+.feather2 {
+  position: absolute;
+  width: 120px;
+  height: 65px;
+  top: 0px;
+  left: 0px;
+  background-color: #262626;
+  border-radius: 0px 0px 170px 170px;
+  animation-name: fly;
+  animation-duration: 2s;
+  animation-iteration-count: infinite; }
+
+@keyframes fly {
+  0% {
+    transform: rotate(15deg); }
+  50% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(15deg); } }
+@media screen and (max-width: 990px) {
+  .wavy-container {
+    bottom: -40px; }
+
+  .head {
+    width: 60px;
+    height: 40px;
+    top: 20px;
+    left: -10px; }
+
+  .eye {
+    width: 10px;
+    height: 10px;
+    top: 15px;
+    left: 40px; }
+
+  .eyeball {
+    width: 4px;
+    height: 4px;
+    top: 3px;
+    left: 4px; }
+
+  .beak {
+    width: 0px;
+    height: 0px;
+    top: 27px;
+    left: 60px;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+    border-left: 14px solid #ffdb4d; }
+
+  .body {
+    width: 130px;
+    height: 60px;
+    top: 60px;
+    left: -80px; }
+
+  .feather1 {
+    width: 0px;
+    height: 0px;
+    top: -16px;
+    left: -15px;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 20px solid #b3b3ff; }
+
+  .feather2 {
+    width: 100px;
+    height: 45px;
+    top: 0px;
+    left: 0px; } }
+@media screen and (max-width: 760px) {
+  .wavy-container {
+    bottom: -60px; }
+
+  .duck-movie {
+    top: -80px; }
+
+  .head {
+    width: 50px;
+    height: 30px;
+    top: 30px;
+    left: -20px; }
+
+  .eye {
+    width: 7px;
+    height: 7px;
+    top: 15px;
+    left: 35px; }
+
+  .eyeball {
+    width: 3px;
+    height: 3px;
+    top: 2px;
+    left: 3px; }
+
+  .beak {
+    width: 0px;
+    height: 0px;
+    top: 20px;
+    left: 50px;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 10px solid #ffdb4d; }
+
+  .body {
+    width: 100px;
+    height: 50px;
+    top: 60px;
+    left: -70px; }
+
+  .feather1 {
+    width: 0px;
+    height: 0px;
+    top: -12px;
+    left: -13px;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 16px solid #b3b3ff; }
+
+  .feather2 {
+    width: 85px;
+    height: 40px;
+    top: 0px;
+    left: 0px; } }
+
+/*# sourceMappingURL=style.css.map */

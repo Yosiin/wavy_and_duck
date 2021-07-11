@@ -1,0 +1,43 @@
+/*
+*Genereal settings
+-----------------------------------*/
+
+html {
+box-sizing: border-box; }
+
+* {
+padding: 0;
+margin: 0; }
+
+*, *:before, *:after {
+box-sizing: inherit; }
+
+a {
+text-decoration: none;
+color: var(--red);
+}
+
+ul {
+list-style: none;
+}
+
+input,
+textarea,
+button {
+    background: #F4F1F4;
+    border: none;
+} 
+
+
+::selection {
+background: #697686;
+color: #732c51;
+text-shadow: none;
+}
+
+body {
+font-family: 'Inter', sans-serif; /* Text */
+-webkit-font-smoothing: antialiased;
+overflow: hidden;
+background-color:#110A34;
+}
